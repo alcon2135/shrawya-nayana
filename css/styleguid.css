@@ -1,0 +1,15 @@
+:root {
+    --title-32-koulen-font-family: "Koulen", Helvetica;
+    --title-32-koulen-font-weight: 400;
+    --title-32-koulen-font-size: 32px;
+    --title-32-koulen-letter-spacing: 0px;
+    --title-32-koulen-line-height: 50px;
+    --title-32-koulen-font-style: normal;
+    --memo-18-lexend-light-font-family: "Lexend Deca", Helvetica;
+    --memo-18-lexend-light-font-weight: 300;
+    --memo-18-lexend-light-font-size: 18px;
+    --memo-18-lexend-light-letter-spacing: 0px;
+    --memo-18-lexend-light-line-height: 28px;
+    --memo-18-lexend-light-font-style: normal;
+  }
+  
