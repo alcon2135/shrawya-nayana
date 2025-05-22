@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrawya Nayana 3.0</title>
+  <link rel="stylesheet" href="css/categories.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+      <header>
+        <div class="logo">
+          <img class="logo1" src="assets/logos/rotaract_logo.png" alt="Rotaract Logo">
+          <div>
+            <img class="logo2" src="assets/logos/shrawya_nayana_logo.png" alt="Shrawya Nayana Logo">
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="#">Categories</a>
+          <a href="about-us.html">About Us</a>
+        </nav>
+      </header>
+
+      <main>
+      <!-- Category Section -->
+      <section class="category-section">
+      <h2>Educational</h2>
+      <div class="scroll-container">
+        <button class="scroll-arrow left" style="display: none;">
+          <img src="assets/categories/icons/left-arrow.png" alt="Left">
+        </button>
+        <div class="book-list">
+          <div class="book-item"><img class="book" src="assets/categories/book-covers/cinderella.jpeg" alt="Cinderella"
+                                      data-title="Cinderella"
+                                      data-author="Charles Perrault"
+                                      data-cover="assets/categories/book-covers/cinderella.jpeg"
+                                      data-audio="assets/categories/audio/cinderella.mp3" /><p>Cinderella</p></div>
+          <div class="book-item"><img class="book" src="assets/categories/book-covers/lionking.jpeg" alt="LionKing"
+                                      data-title="Lion King"
+                                      data-author="Brothers Grimm"
+                                      data-cover="assets/categories/book-covers/lionking.jpeg"
+                                      data-audio="assets/categories/audio/lionking.mp3" /><p>Lion King</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>The Math Book</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>Quantum Physics</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>English Literature</p></div>
+        </div>
+        <button class="scroll-arrow right">
+          <img src="assets/categories/icons/right-arrow.png" alt="Right">
+        </button>
+      </div>
+    </section>
+
+    <section class="category-section">
+      <h2>Fantasy</h2>
+      <div class="scroll-container">
+        <button class="scroll-arrow left" style="display: none;">
+          <img src="assets/categories/icons/left-arrow.png" alt="Left">
+        </button>
+        <div class="book-list">
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>Book of Sorcery</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>Darkness</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>The First Witch</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>The Darkest Forest</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>Descent to Hell</p></div>
+        </div>
+        <button class="scroll-arrow right">
+          <img src="assets/categories/icons/right-arrow.png" alt="Right">
+        </button>
+      </div>
+    </section>
+
+    <section class="category-section">
+      <h2>Science Fiction</h2>
+      <div class="scroll-container">
+        <button class="scroll-arrow left" style="display: none;">
+          <img src="assets/categories/icons/left-arrow.png" alt="Left">
+        </button>
+        <div class="book-list">
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>The Outer Space</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>Carrie Anne's World</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>Heir of the Gift</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>City Dreams</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>Exile of Snake</p></div>
+        </div>
+        <button class="scroll-arrow right">
+          <img src="assets/categories/icons/right-arrow.png" alt="Right">
+        </button>
+      </div>
+    </section>
+
+    <section class="category-section">
+      <h2>History</h2>
+      <div class="scroll-container">
+        <button class="scroll-arrow left" style="display: none;">
+          <img src="assets/categories/icons/left-arrow.png" alt="Left">
+        </button>
+        <div class="book-list">
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>Egyptian History</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>A Brief History of Time</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>Early Indians</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>The Secret History</p></div>
+          <div class="book-item"><img src="assets/categories/example.jpeg" alt=""><p>Islamic Imperialism</p></div>
+        </div>
+        <button class="scroll-arrow right">
+          <img src="assets/categories/icons/right-arrow.png" alt="Right">
+        </button>
+      </div>
+    </section>
+
+    </main>
+
+
+      <script>
+      document.querySelectorAll('.scroll-container').forEach(container => {
+        const leftArrow = container.querySelector('.scroll-arrow.left');
+        const rightArrow = container.querySelector('.scroll-arrow.right');
+        const scrollBox = container.querySelector('.book-list');
+        const scrollAmount = 300;
+
+        rightArrow.addEventListener('click', () => {
+          scrollBox.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        leftArrow.addEventListener('click', () => {
+          scrollBox.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        scrollBox.addEventListener('scroll', () => {
+          if (scrollBox.scrollLeft > 20) {
+            leftArrow.style.display = 'block';
+          } else {
+            leftArrow.style.display = 'none';
+          }
+
+          const maxScrollLeft = scrollBox.scrollWidth - scrollBox.clientWidth;
+          if (scrollBox.scrollLeft >= maxScrollLeft - 20) {
+            rightArrow.style.display = 'none';
+          } else {
+            rightArrow.style.display = 'block';
+          }
+        });
+      });
+
+
+      document.querySelectorAll('.book').forEach(book => {
+      book.addEventListener('click', () => {
+        // Save book details to localStorage
+        localStorage.setItem('selectedBook', JSON.stringify({
+          title: book.dataset.title,
+          author: book.dataset.author,
+          cover: book.dataset.cover,
+          audio: book.dataset.audio
+        }));
+
+        // Redirect to the player page
+        window.location.href = 'player.html';
+      });
+    });
+    </script>
+  
+</body>
+</html>

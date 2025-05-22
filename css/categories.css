@@ -1,0 +1,525 @@
+/* Reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html, body {
+  height: 100%;
+  background-color: #F2F2FA;
+  overflow-x: hidden;
+  position: relative; /* Needed for absolute positioning of circles */
+  z-index: 0; /* establish stacking context */
+}
+
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('assets/categories/backgrounds/background.jpg') no-repeat center center / cover;
+  opacity: 0.3;
+  z-index: -1; /* or 0 instead of -1 */
+}
+
+
+
+
+
+/* Header styles */
+header {
+  height: 100px;
+  background-color: #1d004d;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-radius: 0 0 60px 60px;
+  z-index: 2; /* Above everything */
+  box-shadow: inset 0 0 7px 5px rgba(255, 255, 255, 0.2); /* White glow inside the header */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo .logo2 {
+  width: 145px;
+  height: 145px;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+}
+/* Navigation */
+.nav {
+  position: relative;
+  right: 70px;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.5rem;
+  }
+  
+  .logo .logo2 {
+    position: relative;
+    left: -20px;
+    width: 130px;
+    height: auto;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .logo .logo1 {
+    width: 180px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  
+  /* Navigation */
+  .nav {
+    position: relative;
+    right: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: 1;
+    gap: 1rem;
+  }
+  
+  .nav a {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+  }
+}
+/* Mobile devices */
+@media (max-width: 600px) {
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .circle:nth-child(1) {
+    width: 120px;
+    height: 120px;
+    top: 250px;
+    left: -50px;
+    animation-delay: 0.3s;
+  }
+  
+  .circle:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    top: 750px;
+    left: 50px;
+    animation-delay: 0.5s;
+  }
+  
+  .circle:nth-child(3) {
+    width: 170px;
+    height: 170px;
+    top: 470px;
+    right: -130px;
+    background-color: rgba(28, 68, 101, 0.71);
+    animation-delay: 0.4s;
+  }
+  
+  .circle:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    bottom: 20px;
+    right: 100px;
+    animation-delay: 0.6s;
+  }
+  .left p{
+    display: none;
+  }
+
+  .text-1 {
+    width: 100%;
+    max-width: 850px;
+    padding: 0 1rem;
+    height: auto;
+    display: block;
+  }
+  
+  .text-1 p {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  .bottom_text{
+    font-weight: bold;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.5rem;
+  }
+  
+  .logo .logo2 {
+    position: relative;
+    left: -20px;
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .logo .logo1 {
+    width: 100px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  
+  /* Navigation */
+  .nav {
+    position: relative;
+    right: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: 1;
+    gap: 0.7rem;
+  }
+  
+  .nav a {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .logo .logo1{
+    width: 80px;
+    
+  }
+
+  .logo .logo2{
+    width: 60px;
+    
+  }
+
+  .nav{
+    gap: 15px;
+  }
+
+  .nav a{
+    font-size: 10px;
+  }
+  
+}
+
+@media (max-width: 400px) {
+ .img3{
+  width: 300px;
+ }
+}
+
+
+    main {
+      padding: 2rem 4%;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 2rem 0 1rem;
+    }
+
+    .category-section {
+  margin-bottom: 2rem;
+  position: relative;
+  margin: 0px 0px 100px 0px;
+}
+
+
+
+/* Container becomes horizontal scrollable */
+.book-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* Hide scrollbar */
+.book-list::-webkit-scrollbar {
+  display: none;
+}
+.book-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.book-item {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.book-item img {
+  width: 100%;
+  max-width: clamp(130px, 18vw, 180px); /* min 130px, scales with screen, max 180px */
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 18px solid #8BBEBE;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+
+.book-item p {
+  margin-top: 0.7rem;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Arrow button */
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1d004d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive border thickness */
+@media (max-width: 1024px) {
+  .book-item img {
+    border-width: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-item img {
+    border-width: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-item img {
+    border-width: 6px;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .book-item img {
+    border-width: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-item img {
+    border-width: 10px;
+  }
+}
+
+
+@media (max-width: 520px) {
+  .category-section {
+ 
+  margin: 0px 0px 0px 10px;
+}
+}
+
+@media (max-width: 480px) {
+  .category-section {
+ 
+  margin: 0px 0px 0px 0px;
+}
+}
+
+    
+.scroll-arrow.right {
+  right: 100px;
+}
+
+.book-slider-wrapper {
+  position: relative;
+  overflow-x: visible; /* changed from hidden */
+}
+
+.book-list.scrollable {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: rem;
+  padding-bottom: 1rem;
+}
+
+.book-list.scrollable::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+
+  z-index: 2;
+  padding: 0;
+}
+
+.scroll-arrow img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.scroll-arrow.left {
+  left: 0;
+}
+
+.scroll-arrow.right {
+  right: 0;
+}
+
+
+
+/* Show arrow on smaller screens */
+@media (max-width: 1024px) {
+  .book-list {
+    grid-template-columns: none !important; /* prevent grid layout */
+  }
+  .book-list.scrollable {
+    flex-wrap: nowrap;
+  }
+  .scroll-arrow {
+    display: block; /* initial display, JS will toggle dynamically */
+  }
+}
+
+@media (max-width: 1024px) {
+ .book-list {
+
+  gap: 0.3rem;
+
+}
+.category-section{
+  margin-left: 0px;
+}
+}
+
+
+
+
+
+
+.scroll-arrow.left {
+  left: 10px;
+}
+
+.scroll-arrow.right {
+  right: 10px;
+}
+
+.scroll-container {
+  overflow-x: auto;
+  position: relative;
+  padding: 0 1rem; /* Add side padding to keep arrows and books visible */
+}
+
+@media (max-width: 460px) {
+  .book-item img {
+    max-width: 100px !important;
+    border-width: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-section{
+    margin: 0px 0px 0px 60px;
+  }
+
+  .scroll-arrow .right{
+    left: 500px;
+  }
+}
+
+@media (max-width: 400px) {
+  .category-section{
+    margin: 0px 0px 0px 130px;
+  }
+
+ 
+}
+
+
