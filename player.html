@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="css/player.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+  <title>Shrawya Nayana 3.0</title>
+</head>
+
+<body>
+  <!-- Audio Element -->
+  <audio id="audio-player" src="audio/cinderella.mp3"></audio>
+
+  <div class="desktop">
+    <div class="div">
+      <div class="overlap-group">
+        <div class="overlap">
+          <!-- Book Cover and Title Section -->
+          <img class="book-cover" src="assets/book-covers/coming_soon.png" alt="Book Cover" />
+          <p class="the-invisible-cloud">
+            <span class="text-wrapper">Cinderella<br /><br /></span>
+            <span class="span">By: Charles Perrault</span>
+          </p>
+        </div>
+
+        <div class="play">
+          <div class="play-section">
+            <!-- Timeline Section -->
+            <div class="time-line">
+              <img id="seeker" class="ellipse-1" src="assets/player/Ellipse 1.png" alt="Seeker" />
+              <img id="timeline" class="line-1" src="assets/player/Line 1.png" alt="Timeline" />
+
+              <div class="play-buttons">
+                <!-- Play, Forward, and Backward Buttons -->
+                <img class="backward-button" src="assets/player/back 1.png" alt="Back Button" />
+                <img class="play-button" src="assets/player/play 1.png" alt="Play Button" />
+                <img class="forward-button" src="assets/player/next 1.png" alt="Forward Button" />
+              </div>
+            </div>
+          </div>
+
+          <div class="volume">
+            <!-- Volume Control Section -->
+            <img id="volume-bar" class="line-2" src="assets/player/Line 2.png" alt="Volume Bar" />
+            <img id="volume-dot" class="ellipse-2" src="assets/player/Ellipse 2.png" alt="Volume Dot" />
+
+            <div class="volume-buttons">
+              <!-- Volume Low and High Buttons -->
+              <img class="volume-low" src="assets/player/volume 1.png" alt="Volume Low" />
+              <img class="volume-high" src="assets/player/volume 2.png" alt="Volume High" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back Arrow Button -->
+      <a href="categories.html">
+        <img class="arrow-left-circle" src="assets/player/Arrow left-circle.png" alt="Back Arrow" />
+      </a>
+      
+    </div>
+  </div>
+
+  <!-- Link to External JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
